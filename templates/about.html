@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>shop</title>
+</head>
+<style>
+  section { 
+    padding:  20px;  
+}
+#products .product {
+    
+    border: 1px solid #000000;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    display: inline-block;  
+}
+
+#products .product img {
+    border:1px solid black;
+    background-color: #eee;
+    
+    max-width:300px;
+    max-height:300px ;
+}
+.coustom-link{
+    text-decoration: none;
+    display:inline-block;
+    padding-top: 10px;
+    padding: 10px 20px;
+    background-color: #575751;
+    border:3px solid black;
+    -webkit-text-fill-color: #ffffff;
+    color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    margin:10px;
+}
+.coustom-link:hover{
+    text-decoration: double;
+        background-color:black;
+       transform:scale(1.1);
+}
+h2{
+    text-align: center;
+    font-size: x-large;
+    color: #ffffff;
+    padding: 20px;
+    
+}
+.more{
+    display:inline-block;
+    padding:20px 30px;
+    margin-left: 700px;
+    cursor: pointer;
+    border:0px solid black;
+    color:rgb(255, 255, 255);
+    background-color: #000000;
+    text-align: center;
+    font-size: large;
+}
+.more:hover{
+    background-color: #807c7c;
+
+}
+.navbar {
+    display: flex;
+    width:100%;
+    border:1px solid black;
+    
+    }
+    .nav-item{
+    padding: 10px 20px;
+    
+    -webkit-text-fill-color: #000000;
+    font-size: large;
+    text-decoration: none;
+    transition: transform 0.3s;
+    }
+    .nav-item:hover {
+    background-color: #07d4f8;
+    border-radius: 10px;
+    transform: scale(1.1);
+    .logo {
+      width: 50px;
+      height: 50px;
+      color: black;
+      margin-top: 0;
+      margin-left: 2px;
+  }
+  .myimg {
+      width: 50px;
+      height: 50px;
+      border: 2px solid black;
+      border-radius: 25px;
+  }
+    }
+
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">HEALTH CARE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="/about">Shop</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/developer">Developer</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/blog">Blog</a>
+              </li>
+          </ul>
+          <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+      </div>
+  </div>
+</nav>
+<body>
+    <section id="products">
+        <h2>Our Top Products</h2>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-1.jpg') }}" alt="Vitamins" width="400px" height="400px">
+            <h3>VITAMINS</h3>
+            
+            <span><b>Price: ₹10.99</b></span>
+        
+            <br>
+    
+               
+            <a href="cart.html" class="coustom-link" target="_blank"><b>BUY NOW</b></a>
+        
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-2.jpg') }}" alt="Paracetamol" width="400px" height="400px">
+            <h3>PARACETAMOL</h3>
+    
+            <span><b>Price: ₹14.99</b></span>
+            <br>
+        
+          
+            <a href="cart.html"class="coustom-link" target="_blank"><b>BUY NOW</b></a>
+            
+            
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-3.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>ATIVAN</h3>
+            
+            <span><b>Price: ₹12.49</b></span>
+            <br>
+
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+            
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-4.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>TRAZODONE</h3>
+            
+            <span><b>Price: ₹15.09 </b></span>
+            <br>
+ 
+                <a href="cart.html"class="coustom-link" target="_blank"><b>BUY NOW</b></a>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-5.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>AMOXICILLIN</h3>
+            
+            <span><b>Price: ₹18.05 </b></span>
+            <br>
+            
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+    
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-6.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>CEPHALEXIN</h3>
+            
+            <span><b>Price: ₹17.05 </b></span>
+            <br>
+            
+
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+ 
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-1.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>PAIN KILLERS</h3>
+            
+            <span><b>Price: ₹19.02</b></span>
+            <br>
+
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+ 
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-2.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>BUPROPION</h3>
+            
+            <span><b>Price: ₹57.06</b></span>
+            <br>
+            
+
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-3.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>ASPIRIN</h3>
+            
+            <span><b>Price: $11.06</b></span>
+            <br>
+
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+  
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-4.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>METFORMIN</h3>
+            
+            <span><b>Price:₹90.00 </b></span>
+            <br>
+
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-5.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>AMLODIPINE</h3>
+            
+            <span><b>Price: ₹87.00</b></span>
+            <br>
+            
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+  
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-6.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>CETIRIZINE</h3>
+            
+            <span><b>Price: ₹45.00</b></span>
+            <br>
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+                </div>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-1.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>DOXYCYCLINE</h3>
+            
+            <span><b>Price: ₹65.00</b></span>
+            <br>
+            
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+                </div>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-2.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>BUPROPION</h3>
+            
+            <span><b>Price: ₹75.33</b></span>
+            <br>
+ 
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+                </div>
+
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-3.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>LEVOFLOXACIN</h3>
+            
+            <span><b>Price: ₹25.36</b></span>
+            <br>
+ 
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+                </div>
+        </div>
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-4.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>WARFARIN</h3>
+            
+            <span><b>Price: ₹65.21</b></span>
+            <br>
+
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+                </div>
+                
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-5.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>LOSARTAN</h3>
+            
+            <span><b>Price: ₹55.00</b></span>
+            <br>
+
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+                </div> 
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-6.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>PREDNISONE</h3>
+            
+            <span><b>Price: ₹35.00</b></span>
+            <br>
+
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+                </div>
+        
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-1.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>RISPERIDONE</h3>
+            
+            <span><b>Price: ₹20.05 </b></span>
+            <br>
+
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+                </div>
+    
+        <div class="product">
+            <img src="{{ url_for('static', filename='p-2.jpg') }}" alt="c" width="300px" height="400px">
+            <h3>QUETIAPINE</h3>
+            
+            <span><b>Price: ₹85.00 </b></span>
+            <br>
+                <a href="cart.html"class="coustom-link"target="_blank"><b>BUY NOW</b></a>
+                </div>
+       <p class="more">See  More</p>    
+    </section>
+    
+</body>
+</html>
